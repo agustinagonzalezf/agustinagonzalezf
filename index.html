@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"
+        integrity="sha512-tQQXRDB2wEmuJGtFrmmoFYzNTq8StA1XJrfO0OQbbTxd9G0CwaTDL6/C1y805IlvBVrMwOqob1kf6r/2U5XXVg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="conteiner">
+        &nbsp;
+        <header class="header" >
+            <span class="font-titulo">
+             <a href="#inicio" class="font-titulo">     
+                Inicio
+             </a>
+            </span>
+            <span> <a href="#sobremi" class="font-titulo">
+                    Sobre mi
+                </a>
+
+            </span>
+
+            <span> <a href="#contacto" class="font-titulo">
+                    Contacto
+                </a>
+
+            </span>
+
+        </header>
+        &nbsp;
+
+        <main class="main">
+            <div class="row" id="inicio">
+                <span class="flex margin-xauto columnas-principales">
+                    <span>
+                        <h1 class="displayinline font-titulo">
+                            Agustina Gonzalez
+                        </h1>
+                    </span>
+                    <span>
+                        <h2 class="displayinline font-texto">Desarrolladora web</h2>
+                    </span>
+                    <span class="font-text">
+                        <div class="alineacion-vertical agrandar"><i
+                                class="fa-solid fa-envelope fa-2x"></i>agustina.3@gmail.com</div>
+                        <div class="alineacion-vertical agrandar"> <i class="fa-solid fa-phone fa-2x"></i>+54-012-3456789
+                        </div>
+                        <div class="alineacion-vertical agrandar"><i class="fa-solid fa-location-dot fa-2x"></i>
+                            Villa María, Córdoba</div>
+                        <div class="alineacion-vertical">
+                            <a href="" class="agrandar">
+                                <i class="fa-brands fa-github fa-2x"></i>Github
+                            </a>
+
+                        </div>
+
+                    </span>
+                </span>
+                <span class="imgcontenedor margin-xauto columnas-principales">
+                    <img src="./fotoperfil.jpg" alt="Foto perfil" id="radio" />
+
+                </span>
+
+            </div>
+
+            <div class="row" id="sobremi">
+                <span class="flex margin-xauto columnas-principales">
+
+                    <h2 class="displayinline font-titulo">
+
+                        Sobre mi
+                    </h2>
+                </span>
+
+                <span class="imgcontenedor margin-xauto columnas-principales">
+                    <p id="texto">
+                        ¡Hola! Mi nombre es Agustina
+                        Soy estudiantes de Programación Web en Argentina Programa.
+                        <br>
+                        ¡Tengo muchos deseos de aprender con ustedes!
+                        <br>
+                        Me apasiona el desarrollo web y estoy comprometida con mi formación en programación. Creo firmemente en que el aprendizaje constante es la clave para alcanzar tus objetivos y estoy emocionada de formar parte de este programa para seguir creciendo en mi carrera como programadora web.
+                        <br>
+                        <br>
+                     </p>
+
+                </span>
+
+            </div>
+
+            <div id="contacto" class="text-centro mt-8">                
+                <h2 class="font-titulo text-centro">
+                    Contacto
+                </h2>                     
+                <div class="color">
+                    <form action="mailto:agustina.gonzalez.fuentesoutlook.com" method="post" class="flexform">
+                        
+                        <label for="inputIdNombre">
+                            Nombre:
+                        </label>
+                        <input id="inputIdNombre" type="text" name="nombre" placeholder="Ingrese su nombre"> 
+
+                        <label for="inputIdApellido">Apellido:</label>
+                        <input type="text" placeholder="Ingrese su apellido" name="apellido">
+
+                        <label for="inputIdCorreo">Correo electrónico: </label>
+                        <input type="email" placeholder="Ingrese su correo electrónico" name="correo">
+
+                        <label for="inputIdNúmero">Número de contacto:</label>
+                        <input type="number" placeholder="Ingrese su número" name="telefono">
+                        
+                        <label for="inputIdNúmero">Número de contacto:</label>
+                        <textarea type="text" placeholder="Su mensaje" name="mensaje"></textarea>
+
+                        <button type="submit">
+                            Enviar
+
+                        </button>
+
+                    </form>
+                </div>                        
+            </div>
+
+
+        </main>
+    </div>
+        <script>
+            const links = document.querySelectorAll('a[href^="#"]');
+
+            links.forEach(link => {
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    const targetId = link.getAttribute('href');
+                    const targetEl = document.querySelector(targetId);
+
+                    targetEl.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+
+        </script>
+
+</body>
+
+</html>
